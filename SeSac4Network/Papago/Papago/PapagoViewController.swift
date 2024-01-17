@@ -8,6 +8,8 @@
 import UIKit
 import Alamofire
 
+//success.message.result.translatedText
+
 struct Papago: Codable {
     let message: PapagoResult
 }

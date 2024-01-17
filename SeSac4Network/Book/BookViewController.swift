@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 struct Book: Codable {
     let documents: [Document]
@@ -47,10 +48,33 @@ struct Meta: Codable {
 class BookViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var bookCollectionView: UICollectionView!
+    
+    var originalDocuments: [Document] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        configureView()
+    }
+    
+    func configureView() {
+        let xib = UINib(nibName: "BookCollectionViewCell", bundle: nil)
+        bookCollectionView.register(xib, forCellWithReuseIdentifier: "BookCollectionViewCell")
+        
+        bookCollectionView.delegate = self
+        bookCollectionView.dataSource = self
+        
+        let layout = UICollectionViewFlowLayout()   // 여러행, 여러열
+        let spacing: CGFloat = 20
+        let cellWidth = UIScreen.main.bounds.width - spacing * 3
+        layout.itemSize = CGSize(width: cellWidth / 2, height: cellWidth / 2)
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
+        layout.scrollDirection = .vertical
+        
+        bookCollectionView.collectionViewLayout = layout
     }
     
     func callRequest(text: String) {
@@ -67,9 +91,8 @@ class BookViewController: UIViewController {
         AF.request(url, method: .get, headers: headers).responseDecodable(of: Book.self) { response in
             switch response.result {
             case .success(let success):
-                dump(success.documents)
-                
-                
+                self.originalDocuments = success.documents
+                self.bookCollectionView.reloadData()
             case .failure(let failure):
                 print(failure.localizedDescription)
             }
@@ -80,6 +103,25 @@ class BookViewController: UIViewController {
 extension BookViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         callRequest(text: searchBar.text!)
+        searchBar.resignFirstResponder()
     }
 }
 
+extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return originalDocuments.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCollectionViewCell" , for: indexPath) as! BookCollectionViewCell
+        
+        let document = originalDocuments[indexPath.row]
+        cell.titleLabel.text = document.title
+        cell.priceLabel.text = String(document.price)
+        
+        let url = URL(string: document.thumbnail)
+        cell.thumbnailImageView.kf.setImage(with: url)
+        
+        return cell
+    }
+}
