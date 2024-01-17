@@ -22,6 +22,22 @@ struct PapagoFinal: Codable {
     let translatedText: String
 }
 
+let languageDictionary: [String: String] = [
+    "ko": "한국어",
+    "en": "영어",
+    "ja": "일본어",
+    "zh-CN": "중국어 간체",
+    "zh-TW": "중국어 번체",
+    "vi": "베트남어",
+    "id": "인도네시아어",
+    "th": "태국어",
+    "de": "독일어",
+    "ru": "러시아어",
+    "es": "스페인어",
+    "it": "이탈리아어",
+    "fr": "프랑스어"
+]
+
 class PapagoViewController: UIViewController {
     
     @IBOutlet weak var srcBtn: UIButton!
@@ -36,6 +52,8 @@ class PapagoViewController: UIViewController {
         configView()
         
         translateBtn.addTarget(self, action: #selector(translateButtonClicked), for: .touchUpInside)
+        srcBtn.addTarget(self, action: #selector(srcBtnClicked), for: .touchUpInside)
+        trgBtn.addTarget(self, action: #selector(trgBtnClicked), for: .touchUpInside)
     }
 
     func configView() {
@@ -68,7 +86,6 @@ class PapagoViewController: UIViewController {
             switch response.result {
             case .success(let success):
                 dump(success)
-                
                 self.targetLabel.text = success.message.result.translatedText
             case .failure(let failure):
                 print(failure.localizedDescription)
@@ -77,24 +94,22 @@ class PapagoViewController: UIViewController {
     }
     
     
-    @IBAction func srcBtnClicked(_ sender: Any) {
+    @objc func srcBtnClicked() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SourceLangViewController") as! SourceLangViewController
     
 //        vc.contents = list[indexPath.row].phoneResult
 //        
 //        vc.data = list[indexPath.row]
         
+        vc.langDic = languageDictionary
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func trgBtnClicked(_ sender: Any) {
+    @objc func trgBtnClicked() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "TargetLangViewController") as! TargetLangViewController
         
-//        // 2. vc가 가지고 있는 공간(프로퍼티)에 데이터 추가해주기
-//        vc.contents = list[indexPath.row].phoneResult
-//        
-//        vc.data = list[indexPath.row]
-        
+        vc.langDic = languageDictionary
         
         navigationController?.pushViewController(vc, animated: true)
     }

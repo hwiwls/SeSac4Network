@@ -8,23 +8,32 @@
 import UIKit
 
 class SourceLangViewController: UIViewController {
+    
     @IBOutlet weak var srcLangTableView: UITableView!
+    
+    var langDic: [String: String] = ["ko": "한국어"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         srcLangTableView.backgroundColor = .clear
         configTableView()
+        print(langDic)
     }
 }
 
 extension SourceLangViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return languageDictionary.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SourceLangTableViewCell", for: indexPath) as! SourceLangTableViewCell
+        
+        let languageValues = Array(languageDictionary.values)
+        let languageValue = languageValues[indexPath.row]
+        
+        cell.srcLangLabel?.text = languageValue
         
         return cell
     }
