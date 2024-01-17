@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1329072B57AF9C005AEFDD /* SourceLangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1329052B57AF9C005AEFDD /* SourceLangTableViewCell.swift */; };
+		2E1329082B57AF9C005AEFDD /* SourceLangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1329062B57AF9C005AEFDD /* SourceLangTableViewCell.xib */; };
+		2E13290B2B57AFAF005AEFDD /* TargetLangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1329092B57AFAF005AEFDD /* TargetLangTableViewCell.swift */; };
+		2E13290C2B57AFAF005AEFDD /* TargetLangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E13290A2B57AFAF005AEFDD /* TargetLangTableViewCell.xib */; };
+		2E18E39C2B57AD280035ECC2 /* SourceLangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18E39B2B57AD280035ECC2 /* SourceLangViewController.swift */; };
+		2E18E39E2B57AD310035ECC2 /* TargetLangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18E39D2B57AD310035ECC2 /* TargetLangViewController.swift */; };
+		2E7C64952B576AF20067310F /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C64942B576AF20067310F /* BookViewController.swift */; };
+		2E7C64972B576C1A0067310F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C64962B576C1A0067310F /* .gitignore */; };
+		2E7C649B2B576D350067310F /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C649A2B576D350067310F /* APIKey.swift */; };
 		2E94525B2B5611A80032F3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E94525A2B5611A80032F3F0 /* AppDelegate.swift */; };
 		2E94525D2B5611A80032F3F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E94525C2B5611A80032F3F0 /* SceneDelegate.swift */; };
-		2E94525F2B5611A80032F3F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E94525E2B5611A80032F3F0 /* ViewController.swift */; };
+		2E94525F2B5611A80032F3F0 /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E94525E2B5611A80032F3F0 /* PapagoViewController.swift */; };
 		2E9452622B5611A80032F3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9452602B5611A80032F3F0 /* Main.storyboard */; };
 		2E9452642B5611AA0032F3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9452632B5611AA0032F3F0 /* Assets.xcassets */; };
 		2E9452672B5611AA0032F3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9452652B5611AA0032F3F0 /* LaunchScreen.storyboard */; };
@@ -20,10 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1329052B57AF9C005AEFDD /* SourceLangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLangTableViewCell.swift; sourceTree = "<group>"; };
+		2E1329062B57AF9C005AEFDD /* SourceLangTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceLangTableViewCell.xib; sourceTree = "<group>"; };
+		2E1329092B57AFAF005AEFDD /* TargetLangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetLangTableViewCell.swift; sourceTree = "<group>"; };
+		2E13290A2B57AFAF005AEFDD /* TargetLangTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TargetLangTableViewCell.xib; sourceTree = "<group>"; };
+		2E18E39B2B57AD280035ECC2 /* SourceLangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLangViewController.swift; sourceTree = "<group>"; };
+		2E18E39D2B57AD310035ECC2 /* TargetLangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetLangViewController.swift; sourceTree = "<group>"; };
+		2E7C64942B576AF20067310F /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		2E7C64962B576C1A0067310F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2E7C649A2B576D350067310F /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2E9452572B5611A80032F3F0 /* SeSac4Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSac4Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E94525A2B5611A80032F3F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E94525C2B5611A80032F3F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E94525E2B5611A80032F3F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E94525E2B5611A80032F3F0 /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 		2E9452612B5611A80032F3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E9452632B5611AA0032F3F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E9452662B5611AA0032F3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,9 +63,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1329022B57AF70005AEFDD /* Papago */ = {
+			isa = PBXGroup;
+			children = (
+				2E94525E2B5611A80032F3F0 /* PapagoViewController.swift */,
+			);
+			path = Papago;
+			sourceTree = "<group>";
+		};
+		2E1329032B57AF79005AEFDD /* SourceLang */ = {
+			isa = PBXGroup;
+			children = (
+				2E18E39B2B57AD280035ECC2 /* SourceLangViewController.swift */,
+				2E1329052B57AF9C005AEFDD /* SourceLangTableViewCell.swift */,
+				2E1329062B57AF9C005AEFDD /* SourceLangTableViewCell.xib */,
+			);
+			path = SourceLang;
+			sourceTree = "<group>";
+		};
+		2E1329042B57AF83005AEFDD /* TargetLang */ = {
+			isa = PBXGroup;
+			children = (
+				2E18E39D2B57AD310035ECC2 /* TargetLangViewController.swift */,
+				2E1329092B57AFAF005AEFDD /* TargetLangTableViewCell.swift */,
+				2E13290A2B57AFAF005AEFDD /* TargetLangTableViewCell.xib */,
+			);
+			path = TargetLang;
+			sourceTree = "<group>";
+		};
+		2E18E39A2B57AD0A0035ECC2 /* Papago */ = {
+			isa = PBXGroup;
+			children = (
+				2E1329022B57AF70005AEFDD /* Papago */,
+				2E1329042B57AF83005AEFDD /* TargetLang */,
+				2E1329032B57AF79005AEFDD /* SourceLang */,
+			);
+			path = Papago;
+			sourceTree = "<group>";
+		};
+		2E7C649C2B576E300067310F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		2E94524E2B5611A80032F3F0 = {
 			isa = PBXGroup;
 			children = (
+				2E7C64962B576C1A0067310F /* .gitignore */,
 				2E9452592B5611A80032F3F0 /* SeSac4Network */,
 				2E9452582B5611A80032F3F0 /* Products */,
 			);
@@ -64,16 +128,19 @@
 		2E9452592B5611A80032F3F0 /* SeSac4Network */ = {
 			isa = PBXGroup;
 			children = (
+				2E7C649C2B576E300067310F /* Resource */,
 				2E94525A2B5611A80032F3F0 /* AppDelegate.swift */,
 				2E94525C2B5611A80032F3F0 /* SceneDelegate.swift */,
 				2E9452602B5611A80032F3F0 /* Main.storyboard */,
-				2E94525E2B5611A80032F3F0 /* ViewController.swift */,
+				2E18E39A2B57AD0A0035ECC2 /* Papago */,
+				2E7C64942B576AF20067310F /* BookViewController.swift */,
 				2E9452712B5612860032F3F0 /* LottoViewController.swift */,
 				2E9452732B5621820032F3F0 /* MarketViewController.swift */,
 				2E9452752B56577A0032F3F0 /* LottoAPIManager.swift */,
 				2E9452632B5611AA0032F3F0 /* Assets.xcassets */,
 				2E9452652B5611AA0032F3F0 /* LaunchScreen.storyboard */,
 				2E9452682B5611AA0032F3F0 /* Info.plist */,
+				2E7C649A2B576D350067310F /* APIKey.swift */,
 			);
 			path = SeSac4Network;
 			sourceTree = "<group>";
@@ -142,9 +209,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7C64972B576C1A0067310F /* .gitignore in Resources */,
 				2E9452672B5611AA0032F3F0 /* LaunchScreen.storyboard in Resources */,
 				2E9452642B5611AA0032F3F0 /* Assets.xcassets in Resources */,
 				2E9452622B5611A80032F3F0 /* Main.storyboard in Resources */,
+				2E13290C2B57AFAF005AEFDD /* TargetLangTableViewCell.xib in Resources */,
+				2E1329082B57AF9C005AEFDD /* SourceLangTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +225,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E94525F2B5611A80032F3F0 /* ViewController.swift in Sources */,
+				2E94525F2B5611A80032F3F0 /* PapagoViewController.swift in Sources */,
+				2E1329072B57AF9C005AEFDD /* SourceLangTableViewCell.swift in Sources */,
 				2E9452722B5612860032F3F0 /* LottoViewController.swift in Sources */,
+				2E7C649B2B576D350067310F /* APIKey.swift in Sources */,
 				2E9452742B5621820032F3F0 /* MarketViewController.swift in Sources */,
+				2E7C64952B576AF20067310F /* BookViewController.swift in Sources */,
 				2E94525B2B5611A80032F3F0 /* AppDelegate.swift in Sources */,
 				2E94525D2B5611A80032F3F0 /* SceneDelegate.swift in Sources */,
+				2E13290B2B57AFAF005AEFDD /* TargetLangTableViewCell.swift in Sources */,
+				2E18E39C2B57AD280035ECC2 /* SourceLangViewController.swift in Sources */,
 				2E9452762B56577A0032F3F0 /* LottoAPIManager.swift in Sources */,
+				2E18E39E2B57AD310035ECC2 /* TargetLangViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
